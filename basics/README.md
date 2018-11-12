@@ -1,0 +1,1 @@
+JavaScript exercises can be found in [basics.js](./basics.js) and [harder](./harder) folder.
