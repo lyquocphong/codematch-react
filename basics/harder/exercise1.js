@@ -1,31 +1,20 @@
 /**
- * Without modifying the cities object,
- * fix the code from errors and make it match the expected end result.
- * 
- * End result should be:
- * - If Oulu has districts, print the first district
- * - If not, show an error with message "Error!"
- */
+ * Implement calculateSalary which should calculate the salary of one employee based on 
+ * input parameter baseSalary, which is a number representing developers base salary and 
+ * billings, which should be a list of objects, which contain fields:
+ * rate (billing rate per hour) 
+ * hours (number of hours)
+ * multiplier (which portition of billing is calculated as bonus)
+ * */
 
-// DO NOT EDIT THIS OBJECT
-const cities = {
-    "Oulu": {
-        population: 199526,
-        districts: null
-    },
-    "Tampere": {
-        population: 226696,
-        districts: [
-            "Osmonmäki", "Ruotula", "Hakametsä" // and so on
-        ]
-    }
-};
-
-let oulu = Cities.oulu;
-
-if (typeof oulu.districts === "object") {
-    let firstDistrict = oulu.districts[0];
-    console.log(firstDistrict);
-} else {
-    console.error("Error!");
+function calculateSalary(billings, baseSalary) {
+    //write your code here
 }
+
+const billings = [
+    {rate: 65, hours: 140, multiplier: 0.2},
+    {rate: 70, hours: 10, multiplier: 0.2}
+];
+
+const salary = calculateSalary(billings, 2000);
+console.log("Salary was " + salary); //Should be 3960 with default values

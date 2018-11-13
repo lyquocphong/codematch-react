@@ -1,18 +1,31 @@
 /**
- * End result should be:
- * - An object with a key "name" and value "computer"
- *      gets added to an already existing array
+ * Without modifying the cities object,
+ * fix the code from errors and make it match the expected end result.
  * 
- * Fix errors in the code and make the code descriptive and immutable.
- * Modify the code as much as you want, add/remove anything you want,
- * as long as the end result is correct.
+ * End result should be:
+ * - If Oulu has districts, print the first district
+ * - If not, show an error with message "Error!"
  */
-function add(obj, array) {
-    array.push(obj);
+
+// DO NOT EDIT THIS OBJECT
+const cities = {
+    "Oulu": {
+        population: 199526,
+        districts: null
+    },
+    "Tampere": {
+        population: 226696,
+        districts: [
+            "Osmonmäki", "Ruotula", "Hakametsä" // and so on
+        ]
+    }
+};
+
+let oulu = Cities.oulu;
+
+if (typeof oulu.districts === "object") {
+    let firstDistrict = oulu.districts[0];
+    console.log(firstDistrict);
+} else {
+    console.error("Error!");
 }
-
-var arr = [];
-var itm = {name: "computer"};
-
-add(arr, itm);
-

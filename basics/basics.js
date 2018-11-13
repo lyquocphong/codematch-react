@@ -72,4 +72,5 @@ const milliseconds = 1000;
 console.log("'" + text + "'" + " should be printed after " + milliseconds + " milliseconds.");
 returnInXSeconds(text, milliseconds)
     .then(console.log);
+console.log("-------------------------------------------------");
 */
