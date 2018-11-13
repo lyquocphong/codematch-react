@@ -177,7 +177,7 @@ const header = (props) => {
 
 ```
 
-24. Add css classes to make your todos complete buttons show as icons. Example can be found [here](https://www.w3schools.com/howto/howto_css_icon_buttons.asp). You can use the check icon. All icons can be found (here)[https://fontawesome.com/icons?d=gallery]. You can also use classes `.btn` and `.btn-complete` from our custom css. 
+24. Add css classes to make your todos complete buttons show as icons. Example can be found [here](https://www.w3schools.com/howto/howto_css_icon_buttons.asp). You can use the check icon. All icons can be found [here](https://fontawesome.com/icons?d=gallery). You can also use classes `.btn` and `.btn-complete` from our custom css. 
 ```html
 <!-- If you add two conflicting css classes to an element (ie both classes 
 define some of the same declarations), the latter classes declarations will 
@@ -204,7 +204,7 @@ Some ideas for further development:
 - Add typechecking for your components with [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). **Example-todo ends here.**
 - Add remove todo button.
 - Add sorter to your application. You could first sort them by completion status and then by alphabetical order. More info [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
-- Add date added and date completed values to your todo objects. Remove the alphabetical sorting and sort the uncomplete items by date added and complete items by date completed. If you have date completed, you can remove todo.complete boolean as it is reduntant (refactor your app to use the date completed instead of the boolean todo.complete). You might need [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
+- Add date added and date completed values for your todo objects. Remove the alphabetical sorting and sort the uncomplete items by date added and complete items by date completed. If you have date completed, you can remove todo.complete boolean as it is reduntant (refactor your app to use the date completed instead of the boolean todo.complete). You might need [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
 - Add a validator for the input field. You could add an icon or color to indicate that the input is not proper. When the input is not proper, it should not be added to the list of todos and user should be given a warning instead.
 - Add simple backend for the site ([tutorials](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs))
     - [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) the initial list from the backend
