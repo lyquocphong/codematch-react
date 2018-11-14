@@ -6,12 +6,18 @@ const example1 = [1, 2, 3, 4, 5, 6];
 
 /**
  * Exercise 1
+ * 
+ * Filter which each value that below number
+ * 
  * @param {number[]} values 
  * @param {number} number 
  * @returns {number[]} array values which are greater than number
  */
 function greaterThan(values, number) {
-    //write your code here
+   
+    return values.filter(element => {
+        return element > number;
+    })
 }
 
 console.log("greaterThan");
@@ -29,10 +35,12 @@ console.log("-------------------------------------------------");
  */
 function plusValue(values, number) {
     //write your code here
+    return values.map(element => {
+        return element += number;
+    } );
 }
 
 console.log("plusValue");
-printReturnedExpected(example1, greaterThan(example1, 0));
 printReturnedExpected(example1, plusValue(example1, 0));
 printReturnedExpected([2, 3, 4, 5, 6, 7], plusValue(example1, 1));
 printReturnedExpected([0, 1, 2, 3, 4, 5], plusValue(example1, -1));
@@ -46,7 +54,11 @@ console.log("-------------------------------------------------");
  * @returns {number} Sum of all values
  * */
 function sumReduce(values) {
-    //write your code here
+     //write your code here
+
+      if(values.length == 0) return 0;
+
+     return values.map((accumulator, currentValue) => accumulator + currentValue );
 }
 
 console.log("sumReduce");
@@ -64,13 +76,16 @@ console.log("-------------------------------------------------");
  * @returns {Promise} A promise that will resolve to text after <time> seconds
  * */
 function returnInXSeconds(text, milliseconds) {
-    //write your code here
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+          resolve(text);
+        }, milliseconds);
+      });
 }
-/* UNCOMMENT THIS when you want to test this function 
+ 
 const text = "This is text";
 const milliseconds = 1000;
 console.log("'" + text + "'" + " should be printed after " + milliseconds + " milliseconds.");
 returnInXSeconds(text, milliseconds)
     .then(console.log);
 console.log("-------------------------------------------------");
-*/

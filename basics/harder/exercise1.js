@@ -9,6 +9,16 @@
 
 function calculateSalary(billings, baseSalary) {
     //write your code here
+
+    let hour_amount = 0;
+
+    billings.forEach(function(element) {
+        let {rate,hours,multiplier} = element;
+
+        hour_amount += (rate * hours * multiplier);
+    });
+
+    return hour_amount + baseSalary;
 }
 
 const billings = [

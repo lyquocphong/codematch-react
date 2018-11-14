@@ -21,9 +21,9 @@ const cities = {
     }
 };
 
-let oulu = Cities.oulu;
+let oulu = cities.Oulu;
 
-if (typeof oulu.districts === "object") {
+if (Array.isArray(oulu.districts)) {
     let firstDistrict = oulu.districts[0];
     console.log(firstDistrict);
 } else {

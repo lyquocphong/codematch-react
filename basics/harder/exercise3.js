@@ -14,5 +14,5 @@ function add(obj, array) {
 var arr = [];
 var itm = {name: "computer"};
 
-add(arr, itm);
+add(itm,arr);
 
